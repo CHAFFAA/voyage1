@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <script src="https://kit.fontawesome.com/710b40b1cf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div style="padding: 20px;">
+        <button onclick="window.history.back()" 
+                style="background-color: #1e6f73; color: white; padding: 10px 20px; border-radius: 50px; border: none; font-weight: bold; cursor: pointer; transition: background-color 0.3s;">
+                Back
+        </button>
+    </div>
+
+    <div class="container">
+        <h1>Nos Services</h1>
+        <div class="row">
+            <div class="service">
+                <i class="fa-solid fa-laptop"></i>
+                <h2>Création d’itinéraires personnalisés</h2>
+                <p>-Proposez des itinéraires sur mesure en fonction des préférences de voyage des utilisateurs, comme des itinéraires détente, aventure ou culture.</p>
+                <p>-Permettez aux utilisateurs de sélectionner des lieux d'intérêt et de créer un planning d'activités.</p>
+            </div>
+
+            <div class="service">
+                <i class="fa-solid fa-chart-simple"></i>
+                <h2>Marketing</h2>
+                <p>-Mettez en place un programme de parrainage où les utilisateurs gagnent des crédits ou des réductions en invitant des amis à utiliser l’application.</p>
+                <p>-Offrez des points ou des récompenses pour chaque réservation effectuée, qui peuvent être utilisés pour des remises ou des cadeaux.</p>
+            </div>
+
+            <div class="service">
+                <i class="fa-solid fa-person-walking-luggage"></i>
+                <h2>Réservation de groupe simplifiée</h2>
+                <p>-Offrez une option de réservation de groupe avec des réductions pour les réservations collectives, avec la possibilité d’ajouter plusieurs participants et de gérer les paiements partagés.</p>
+            </div>
+
+            <div class="service">
+                <i class="fa-solid fa-person"></i>
+                <h2>Guide interactif en temps réel</h2>
+                <p>-Fournissez une carte interactive avec des informations en temps réel sur les attractions, restaurants et événements locaux.</p>
+                <p>-Proposez des guides audio ou des fiches d’information pour chaque lieu visité.</p>
+            </div>
+
+            <div class="service">
+                <i class="fa-solid fa-plane"></i>
+                <h2>Options de transport et de transfert</h2>
+                <p>-Intégrez des options de réservation de transport local comme des navettes, taxis, ou location de véhicules, directement depuis l'application.</p>
+                <p>-Proposez des suggestions de transfert entre les hôtels, les sites touristiques et les aéroports.</p>
+            </div>
+
+            <div class="service">
+                <i class="fa-brands fa-amazon-pay"></i>
+                <h2>Suivi des dépenses et budget de voyage</h2>
+                <p>-Créez un espace où les utilisateurs peuvent suivre leurs dépenses quotidiennes et définir un budget pour chaque catégorie (hébergement, nourriture, transport).</p>
+                <p>-Permettez de partager les dépenses et de diviser les coûts avec les autres membres du groupe.</p>
+            </div>
+
+            <div class="service">
+                <i class="fa-solid fa-message"></i>
+                <h2>Système de messagerie et de notifications</h2>
+                <p>-Intégrez un système de messagerie pour que les participants au voyage puissent communiquer facilement entre eux.</p>
+                <p>-Ajoutez des notifications pour les rappels d’activités, les horaires de départ, et les changements d’itinéraires.</p>
+            </div>
+            <div class="service">
+                <i class="fa-sharp fa-solid fa-network-wired"></i>
+                <h2>Système de feedback et de recommandations</h2>
+                <p>-Après chaque voyage, proposez aux utilisateurs de donner leur avis et de partager des recommandations pour améliorer les futurs voyages.</p>
+                <p>-Utilisez les données pour suggérer des destinations et des activités similaires lors des prochaines visites.</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+<style>
+    :root {
+        --color-dark-navy-blue: rgb(11, 39, 66);
+        --color-medium-blue: rgb(34, 100, 148);
+        --color-deep-blackish-blue: rgb(6, 20, 32);
+        --color-dark-teal-blue: rgb(22, 69, 108);
+        --color-light-blue: rgb(51, 138, 190);
+        --color-hover-green: #28a745; /* Vert pour le survol */
+        --color-button-blue: #1C4B6D;
+    }
+
+    * {
+        margin: 0;  
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        background: linear-gradient(to bottom, 
+                                    var(--color-dark-navy-blue), 
+                                    var(--color-medium-blue), 
+                                    var(--color-dark-teal-blue), 
+                                    var(--color-light-blue));
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: #fff;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        padding: 0 8%;
+    }
+
+    .container h1 {
+        text-align: center;
+        padding-top: 10%;
+        margin-bottom: 60px;
+        font-weight: 600;
+        position: relative;
+        color: #fff;
+    }
+
+    .container h1::after {
+        content: '';
+        background: #303ef7;
+        width: 100px;
+        height: 5px;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 30px;
+    }
+
+    .service {
+        text-align: center;
+        padding: 25px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.1);
+        transition: transform 0.5s, background 0.5s;
+    }
+
+    .service i {
+        font-size: 40px;
+        margin-bottom: 10px;
+        color: #303ef7;
+    }
+
+    .service h2 {
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .service:hover {
+        background: var(--color-hover-green);
+        color: #fff;
+        transform: scale(1.05);
+    }
+
+    .service:hover i {
+        color: #fff;
+    }
+
+</style>

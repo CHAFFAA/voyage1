@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="container">
+    <!-- En-tête avec le bouton Retour et la barre de progression -->
+    <div class="header-bar">
+        <!-- Bouton Retour -->
+        <button class="back-btn" onclick="window.location.href='ajouter.html'">Back</button>
+        
+        <!-- Barre de progression -->
+        <div class="progress-bar-background">
+            <div class="progress-bar-fill"></div>
+        </div>
+    </div>
+
+    <!-- Formulaire de paiement -->
+    <form action="">
+        <div class="row">
+            <div class="col">
+                <h3 class="title">billing address</h3>
+                <div class="inputBox">
+                    <span>full name :</span>
+                    <input type="text" placeholder="type here">
+                </div>
+                <div class="inputBox">
+                    <span>email :</span>
+                    <input type="email" placeholder="name@gmail.com">
+                </div>
+                <div class="inputBox">
+                    <span>address :</span>
+                    <input type="text" placeholder="room - street - location">
+                </div>
+                <div class="inputBox">
+                    <span>city :</span>
+                    <input type="text" placeholder="Your City">
+                </div>
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>state :</span>
+                        <input type="text" placeholder="Your State">
+                    </div>
+                    <div class="inputBox">
+                        <span>zip code :</span>
+                        <input type="text" placeholder="XXXX">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h3 class="title">payment</h3>
+                <div class="inputBox">
+                    <span>cards accepted :</span>
+                    <img src="img/card_img.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>name on card :</span>
+                    <input type="text" placeholder="MR FIRST LAST">
+                </div>
+                <div class="inputBox">
+                    <span>credit card number :</span>
+                    <input type="number" placeholder="XXXX-XXXX-XXXX-XXXX">
+                </div>
+                <div class="inputBox">
+                    <span>exp month :</span>
+                    <input type="text" placeholder="XX/XX">
+                </div>
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>exp year :</span>
+                        <input type="number" placeholder="2024">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" placeholder="XXX">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input type="button" value="Proceed to Checkout" onclick="window.location.href='index2.html'" class="submit-btn">
+    </form>
+</div>    
+    
+</body>
+</html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+    :root {
+        --color-dark-navy-blue: rgb(11, 39, 66);
+        --color-medium-blue: rgb(34, 100, 148);
+        --color-deep-blackish-blue: rgb(6, 20, 32);
+        --color-dark-teal-blue: rgb(22, 69, 108);
+        --color-light-blue: rgb(51, 138, 190);
+        --color-button-blue: #1C4B6D;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        background: linear-gradient(to bottom, 
+                                    var(--color-dark-navy-blue), 
+                                    var(--color-medium-blue), 
+                                    var(--color-dark-teal-blue), 
+                                    var(--color-light-blue));
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px;
+        min-height: 100vh;
+    }
+
+
+    .header-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 20px;
+        margin-bottom: 20px;
+    }
+
+ 
+    .back-btn {
+        background-color: #38b2ac;
+        color: #fff;
+        font-weight: 500;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 9999px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .back-btn:hover {
+        background-color: #319795;
+    }
+
+
+    .progress-bar-background {
+        background-color: #000;
+        border-radius: 9999px;
+        height: 16px;
+        width: 50%;
+        overflow: hidden;
+        margin-right: 25%;
+    }
+
+    .progress-bar-fill {
+        background-color: #000;
+        height: 100%;
+        width: 50%;
+        border-radius: 9999px;
+    }
+
+    .container form {
+        padding: 20px;
+        width: 700px;
+        background: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    }
+
+    .container form .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .container form .row .col {
+        flex: 1 1 250px;
+    }
+
+    .container form .row .col .title {
+        font-size: 20px;
+        color: #333;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+    .container form .row .col .inputBox {
+        margin: 15px 0;
+    }
+
+    .container form .row .col .inputBox span {
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .container form .row .col .inputBox input {
+        width: 100%;
+        border: 1px solid #ccc;
+        padding: 10px 15px;
+        font-size: 15px;
+        text-transform: none;
+    }
+
+    .container form .row .col .inputBox input:focus {
+        border: 1px solid #000;
+    }
+
+    .container form .row .col .flex {
+        display: flex;
+        gap: 15px;
+    }
+
+    .container form .row .col .flex .inputBox {
+        margin-top: 5px;
+    }
+
+    .container form .row .col .inputBox img {
+        height: 34px;
+        margin-top: 5px;
+        filter: drop-shadow(0 0 1px #000);
+    }
+
+    .container form .submit-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 17px;
+        background: var(--color-button-blue);
+        color: #fff;
+        margin-top: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+        border-radius: 30px;
+    }
+
+    .container form .submit-btn:hover {
+        background: #2ecc71;
+    }
+
+
+    @media (max-width: 768px) {
+        .header-bar {
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+        .progress-bar-background {
+            width: 60%;
+            margin-left: 80px;
+        }
+        .container form {
+            width: 90%;
+        }
+        .container form .row {
+            flex-direction: column;
+        }
+    }
+</style>
